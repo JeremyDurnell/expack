@@ -1,13 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <title>Express and Webpack App</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Search Layout POC</title>
     <link rel="shortcut icon" href="#">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .red {
+            background: orangered;
+            /* width: 100vw; */            
+            height: 100vh;
+            overflow: scroll;
+        }
+
+        .green {
+            background: yellowgreen;
+            /* width: 100vw; */            
+            height: 100vh;
+            display: none;
+        }
+        
+        .card {
+            background: grey;
+            width: 100%;
+            height: 346px /* temp in pixels */
+        }
+
+        .card-alt {
+            background: lightgray;
+            width: 100%;
+            height: 346px /* temp in pixels */
+        }
+
+        .card-alt2 {
+            background: lightblue;
+            width: 100%;
+            height: 346px /* temp in pixels */
+        }
+
+        .placeholder {
+            background: white;
+            width: 100%;
+            height: 346px; /* temp in pixels */
+            display: none;
+        }
+
+        .static-card {
+            height: 395px;
+            width: 305px;
+            background: orange;
+        }
+
+        @media screen and (min-width: 600px) {
+            .green {
+                display: block;       
+                flex-grow: 2;
+
+            }
+
+            .red {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-between;                
+            }
+
+            .card {
+                min-width: 300px;
+                width: 50%;
+                flex-grow: 1;
+            }
+
+            .card-alt {
+                min-width: 300px;
+                width: 50%;
+                flex-grow: 1;
+
+            }
+
+            .card-alt2 {
+                min-width: 300px;
+                width: 50%;
+                flex-grow: 1;
+            }
+
+            .placeholder {
+                min-width: 300px;
+                width: 50%;
+                flex-grow: 1;
+                display: block;
+            }
+
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Expack</h1>
-    <p class="description">Express & Webpack Boilerplate App</p>
-    <div class="awful-selfie"></div>
+    <div class="container">
+        <div class="red">
+            <div class="card"><div class="static-card"></div></div>
+            <div class="card-alt">2</div>
+            <div class="card-alt2">3</div>
+            <div class="card">4</div>
+            <div class="card-alt">5</div>
+            <div class="card-alt2">6</div>
+            <div class="card">7</div>
+            <div class="card-alt">8</div>
+            <div class="card-alt2">9</div>
+            <div class="card">10</div>
+            <div class="card-alt">11</div>
+            <div class="card-alt2">12</div>
+            <div class="card">13</div>
+            <div class="card-alt">14</div>
+            <div class="card-alt2">15</div>
+            <div class="card">16</div>
+            <div class="card-alt">17</div>
+            <div class="card-alt2">18</div>
+            <div class="card">19</div>
+            <div class="placeholder"></div>
+
+        </div>
+        <div class="green">Map</div>
+    </div>
+
 </body>
+
 </html>
