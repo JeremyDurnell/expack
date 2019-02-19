@@ -17,89 +17,69 @@
 
         .red {
             background: orangered;
-            /* width: 100vw; */            
-            height: 100vh;
             overflow: scroll;
+            width: 100vw;
         }
 
         .green {
             background: yellowgreen;
-            /* width: 100vw; */            
-            height: 100vh;
             display: none;
         }
-        
-        .card {
+
+        .static-map {
+            min-width: 272px;
+            /* background: lightgreen; */
+        }
+
+        .static-card,
+        .static-card-alt,
+        .static-card-alt2,
+        .placeholder {
+            height: 395px;
+            min-width: 305px;
+            flex-grow: 1;
+        }
+
+        .static-card {
             background: grey;
-            width: 100%;
-            height: 346px /* temp in pixels */
         }
 
-        .card-alt {
+        .static-card-alt {
             background: lightgray;
-            width: 100%;
-            height: 346px /* temp in pixels */
         }
 
-        .card-alt2 {
+        .static-card-alt2 {
             background: lightblue;
-            width: 100%;
-            height: 346px /* temp in pixels */
         }
 
         .placeholder {
             background: white;
-            width: 100%;
-            height: 346px; /* temp in pixels */
             display: none;
-        }
-
-        .static-card {
-            height: 395px;
-            width: 305px;
-            background: orange;
         }
 
         @media screen and (min-width: 600px) {
             .green {
-                display: block;       
-                flex-grow: 2;
-
+                display: flex;
+                flex-grow: 1;
             }
 
             .red {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: flex-start;
-                justify-content: space-between;                
+                justify-content: space-between;
+                max-width: 325px;
             }
+        }
 
-            .card {
-                min-width: 300px;
-                width: 50%;
-                flex-grow: 1;
-            }
-
-            .card-alt {
-                min-width: 300px;
-                width: 50%;
-                flex-grow: 1;
-
-            }
-
-            .card-alt2 {
-                min-width: 300px;
-                width: 50%;
-                flex-grow: 1;
+        @media screen and (min-width: 900px) {
+            .red {
+                max-width: 612px;
             }
 
             .placeholder {
-                min-width: 300px;
-                width: 50%;
-                flex-grow: 1;
                 display: block;
             }
-
         }
     </style>
 </head>
@@ -107,31 +87,31 @@
 <body>
     <div class="container">
         <div class="red">
-            <div class="card"><div class="static-card"></div></div>
-            <div class="card-alt">2</div>
-            <div class="card-alt2">3</div>
-            <div class="card">4</div>
-            <div class="card-alt">5</div>
-            <div class="card-alt2">6</div>
-            <div class="card">7</div>
-            <div class="card-alt">8</div>
-            <div class="card-alt2">9</div>
-            <div class="card">10</div>
-            <div class="card-alt">11</div>
-            <div class="card-alt2">12</div>
-            <div class="card">13</div>
-            <div class="card-alt">14</div>
-            <div class="card-alt2">15</div>
-            <div class="card">16</div>
-            <div class="card-alt">17</div>
-            <div class="card-alt2">18</div>
-            <div class="card">19</div>
+            <div class="static-card">1</div>
+            <div class="static-card-alt">2</div>
+            <div class="static-card-alt2">3</div>
+            <div class="static-card">4</div>
+            <div class="static-card-alt">5</div>
+            <div class="static-card-alt2">6</div>
+            <div class="static-card">7</div>
+            <div class="static-card-alt">8</div>
+            <div class="static-card-alt2">9</div>
+            <div class="static-card">10</div>
+            <div class="static-card-alt">11</div>
+            <div class="static-card-alt2">12</div>
+            <div class="static-card">13</div>
+            <div class="static-card-alt">14</div>
+            <div class="static-card-alt2">15</div>
+            <div class="static-card">16</div>
+            <div class="static-card-alt">17</div>
+            <div class="static-card-alt2">18</div>
+            <div class="static-card">19</div>
             <div class="placeholder"></div>
-
         </div>
-        <div class="green">Map</div>
+        <div class="green">
+            <div class="static-map">Map</div>
+        </div>
     </div>
-
 </body>
 
 </html>
